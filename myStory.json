@@ -1,0 +1,144 @@
+{
+    "Title": "Underwater Anomaly",
+    "Credits": "Created by Brian Delinela (bdelinel@ucsc.edu).",
+    "Beginning": "You wake up in the Crew Quarters alone. The emergency lights are on and the place is dead quiet. Very unusual for a deep sea mining base previously bustling with activity since it was a couple more hours before the drill would touch down on what the company said was \"the biggest deposit of cobalt we've ever seen\". You just wanted to take a short nap to pass the time. Guess now's the time to start investigating.",
+    "InitialLocation": "Crew Quarters",
+    "Locations": {
+        "Crew Quarters": {
+            "Body": [
+                "Inside the Crew Quarters, the emergency lights are too dim to get a full good look around. You can see the door, though.",
+                "The lights are on in the Crew Quarters but it is still empty. Everyone's lockers are locked tight so there's no investigating in there."
+            ],
+            "Choices": [
+                {
+                    "Text": "Leave the Crew Quarters",
+                    "Target": "Common Area"
+                }
+            ]
+        },
+        "Common Area": {
+            "Body": [
+                "You are now in the Common Area where crew members can relax and unwind after a hard day's work. Today however, it is eerily empty. Where did everybody go?",
+                "The Common Area TV is now on and is playing an episode of How I Met Your Mother. Did everyone leave in a hurry?"
+            ],
+            "Choices": [
+                {
+                    "Text": "Go to Crew Quarters",
+                    "Target": "Crew Quarters"
+                },
+                {
+                    "Text": "Go to the Kitchen",
+                    "Target": "Kitchen"
+                },
+                {
+                    "Text": "Go to the Elevator",
+                    "Target": "Elevator"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": [
+                "In the Kitchen, you also find it void of life. You'd take the time to grab a bite to eat, but with no one around the Kitchen is also void of prepped food. You only find clean plates and cutlery.",
+                "Even with the power back on, you're not sure if you have a moment to prepare some food at a time like this."
+            ],
+            "Choices": [
+                {
+                    "Text": "Go back to the Common Area",
+                    "Target": "Common Area"
+                },
+                {
+                    "Text": "Pick up a Knife",
+                    "Target": "Kitchen"
+                }
+            ],
+            "KnifeKey": {
+                "PreLock": "You think for a moment about grabbing a kitchen knife just in case, but decide against it. There's no need to be drastic and arm yourself with a knife, you think. There has to be a reasonable explanation to what's going on.",
+                "PostLock": "You grab a sharp kitchen knife from the rack, hopefully you can use this to cut down that seaweed.",
+                "PostKnife": "Two knives?! That's going overboard."
+            }
+        },
+        "Elevator": {
+            "Body": [
+                "Unsuprisingly, the Elevator back to the surface are unpowered. What is suprising is that the elevator is still present on the bottom floor. If the elevator is still here, where could the crew be?",
+                "The elevator is now powered and ready to back up to the surface"
+            ],
+            "Choices": [
+                {
+                    "Text": "Go to Main Operations",
+                    "Target": "Main Operations"
+                },
+                {
+                    "Text": "Go to the Common Area",
+                    "Target": "Common Area"
+                },
+                {
+                    "Text": "Use the Elevator",
+                    "Target": "Elevator"
+                }
+            ],
+            "UseElevator": {
+                "NoPower": "Pressing the elevator door button does nothing. Seems like you need to get the power back running first.",
+                "Power": "With power restored, the elevator door opens and you start the slow ascent back to the surface. While you were thinking about the familiar faces you were hoping to see back up on the surface, you hear a large blast below you. The elevator abruptly stops moving and you look down to see a portion of the underwater base collapsed and water rushing in. The shaft's support beams start to buckle and bend as water starts filling the elevator. The last thing you remember is taking a deep breath as you look down at the crumbling structure below you."
+            }
+        },
+        "Main Operations": {
+            "Body": ["Expecting to see people addressing the power situation in the Main Operations room, you are disheartened (and a little concerned) to find the room completely empty. You hoped to see some kind of message left on the room's terminals, but the terminals are also without power. Maybe the first thing to do now is getting the power back on.", "All the terminals in the room have been left on, but unfortunately the only information that they can offer is that the mining drill seems to be malfunctioning. Communication to the surface also seems to be down. The crew didn't even raise a distress signal, so did they just vanish?"],
+            "Choices": [
+                {
+                    "Text": "Go to the Elevator",
+                    "Target": "Elevator"
+                },
+                {
+                    "Text": "Go down to the Generators",
+                    "Target": "Generators"
+                },
+                {
+                    "Text": "Go into the Drill Station",
+                    "Target": "Drill Station"
+                }
+            ]
+        },
+        "Generators": {
+            "Body": [
+                "Surprise, surprise, the generator room is also empty. It also looks like one of the generators took quite a beating. Hopefully you can still restore power to the base.",
+                "With the power on, all but one of the generators now produce a blaring whir. This should hold up for now.",
+                "There's no need to turn the power on because it is already on."
+            ],
+            "Choices": [
+                {
+                    "Text": "Go back up to Main Operations",
+                    "Target": "Main Operations"
+                },
+                {
+                    "Text": "Turn on the Power",
+                    "Target": "Generators"
+                }
+            ],
+            "Power": {
+                "Off": "The power is off.",
+                "On": "Flipping the generator switch, the lights flicker as power is restored to the base."
+            }
+        },
+        "Drill Station": {
+            "Body": ["The room is pitch black, save for a strange green light coming from the center of the station. It's too faint to illuminate your way, so you're going to have to turn the power back on before you can investigate it", "Now that you can actually see the drill, you find that it is covered in thick vines and seaweed, nothing like you've ever seen before. All the way down at the tip of the drill, you see the source of that strange green light: some kind of illuminating crystal embedded into the rock. Seems like the drill chipped some of it off the rock, but it is also enveloped in the thick seaweed."],
+            "Choices": [
+                {
+                    "Text": "Go to Main Operations",
+                    "Target": "Main Operations"
+                },
+                {
+                    "Text": "Investigate the Drill Head",
+                    "Target": "Drill Station"
+                }
+            ],
+            "SeaweedLock": {
+                "PrePower": "It's too dark to do anything in here.",
+                "NoKnife": "You go down to the drill tip and try to pry some of the crystal off with your hands, but it is held tight by the seaweed. You need to find something to cut it with.",
+                "Knife": "Using the knife from the kitchen, you clear out enough of the seaweed to get a piece of the crystal in your hands. It's warm to the touch and the glowing gets more intense. At that moment, you hear a large blast as water starts filling into the station. You try to escape but the rush of the water sweeps you off your feet. As you gasp for air in the rushing water, the glow of the crystal becomes more and more intense. The last thing you remember is being fully submerged not just by water, but also the light coming from the crystal in your hand.\n\nBut after a few moments, the light becomes the only thing you are submerged in. It begins to dim as you find yourself floating inside a huge cavern covered in the same illuminating crystal still sitting in your hand. In the distance, you barely make out the tiny figures of your missing crew members! You try to call out but you find you cannot move. Looking closer, you see their faces obscured by a layer of the crystal pulsating a dim glow. Another flash of green light assaults you as you are knocked out by a concussive force."
+            }
+        },
+        "EndingLocation": {
+            "Body": "..."
+        }
+    }
+}
